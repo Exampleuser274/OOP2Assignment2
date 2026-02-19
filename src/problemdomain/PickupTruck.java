@@ -1,5 +1,6 @@
 package problemdomain;
 
+
 public class PickupTruck extends Vehicle{
 	enum cbs{
 		SB,EB,DB
@@ -12,5 +13,27 @@ public class PickupTruck extends Vehicle{
 		this.cargoBed = cargoBed;
 		this.cargoCapacity = cargoCapacity;
 	}
-	
+	@Override
+	 public String toString() {
+		 String bedDesc;
+		 if (cargoBed == cbs.EB) {
+			 bedDesc = "Short Bed";
+		 } else if (cargoBed == cbs.EB) {
+			 bedDesc = "Extended Bed";
+		 }	else {
+			 bedDesc = "Dump Bed";
+		 }
+		return "Car ID:          " + carID + "\n"
+			 + "Vehicle Type:    " + vehicleType + "\n"
+			 + "Sub Type:        " + subtype + "\n"
+			 + "Speed:           " + speed + "\n"
+			 + "Fuel:            " + fuel + "\n"
+			 + "Number of Seats: " + seats + "\n"
+			 + "Year:            " + year + "\n"
+			 + "Drivetrain:      " + driveTrain + "\n"
+			 + "Price:           " + price + "\n"
+			 + "Available:       " + quantity + "\n"
+			 + "Bed Type:        " + bedDesc + "\n"
+			 + "Bed Size:        " + cargoCapacity;
+	 }
 }
