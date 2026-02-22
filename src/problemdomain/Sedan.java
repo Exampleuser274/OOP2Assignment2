@@ -1,21 +1,19 @@
 package problemdomain;
 
 public class Sedan extends Vehicle{
- enum trunks{
-	 L,M,S
- }
-trunks trunkSize;
- public Sedan(int carID, String vehicleType, String subtype, int speed, float fuel, int seats, int year,
-		String driveTrain, int price, int quantity, trunks trunkSize) {
+	
+String trunkSize;
+ public Sedan(long carID, String vehicleType, String subtype, int speed, double fuel, int seats, int year,
+		String driveTrain, int price, int quantity, String trunkSize) {
 	super(carID, vehicleType, subtype, speed, fuel, seats, year, driveTrain, price, quantity);
 	this.trunkSize = trunkSize;
  }
  @Override
  public String toString() {
 	 String trunkDesc;
-	 if (trunkSize == trunks.L) {
+	 if (trunkSize == "L") {
 		 trunkDesc = "Large/spacious trunk";
-	 } else if (trunkSize == trunks.M) {
+	 } else if (trunkSize == "M") {
 		 trunkDesc = "Moderate";
 	 }	else {
 		 trunkDesc = "Small";

@@ -5,11 +5,11 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import problemdomain.Vehicle;
+import problemdomain.*;
 
 public class Files {
 //Class for save & load functions
-//Alexander Kovach is working on load function
+//LoadFile class made by Alexander Kovach
 	public ArrayList<Vehicle> loadFile() {
 		ArrayList<Vehicle> vehicleList = new ArrayList<Vehicle>();
 		File vehicleListFile = new File("res\\vehicles.txt");
@@ -25,9 +25,46 @@ public class Files {
 			int year;
 			String drivetrain;
 			int price;
+			int quantity;
+			String typeFeature = null;
+			int featureInfo = 0;
+			String idCheck = null;
+			Vehicle newVehicle = null;
 			while (vehicleReader.hasNextLine()) {
 				line = vehicleReader.nextLine();
 				parts = line.split(";");
+				carID = Long.parseLong(parts[0]);
+				vehicleType = parts[1];
+				subType = parts[2];
+				speed = Integer.parseInt(parts[3]);
+				fuel = Double.parseDouble(parts[4]);
+				seats = Integer.parseInt(parts[5]);
+				year = Integer.parseInt(parts[6]);
+				drivetrain = parts[7];
+				price = Integer.parseInt(parts[8]);
+				quantity = Integer.parseInt(parts[9]);
+				idCheck += carID;
+				if (parts.length >= 11) {
+					typeFeature = parts[10];
+				}
+				if (parts.length == 12) {
+					featureInfo = Integer.parseInt(parts[11]);
+				}
+				if (idCheck.startsWith("1")) {
+					
+					newVehicle = new Sedan(carID,vehicleType,subType,speed,fuel,seats,year,drivetrain,price,quantity,typeFeature);
+					
+				} else if (idCheck.startsWith("2")) {
+					newVehicle = new Hatchback(carID,vehicleType,subType,speed,fuel,seats,year,drivetrain,price,quantity,typeFeature);
+				}else if (idCheck.startsWith("3")) {
+					newVehicle = new SUV(carID,vehicleType,subType,speed,fuel,seats,year,drivetrain,price,quantity);
+				}else if (idCheck.startsWith("4") || idCheck.startsWith("5")) {
+					newVehicle = new Hybrid(carID,vehicleType,subType,speed,fuel,seats,year,drivetrain,price,quantity,typeFeature,featureInfo);
+				}else if (idCheck.startsWith("6")){
+					newVehicle = new PickupTruck(carID,vehicleType,subType,speed,fuel,seats,year,drivetrain,price,quantity,typeFeature,featureInfo);
+				}
+				vehicleList.add(newVehicle);
+				
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -35,4 +72,7 @@ public class Files {
 		}
 		return vehicleList;
 	}
+	
+	
+	
 }

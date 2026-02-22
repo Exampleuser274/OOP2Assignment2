@@ -2,13 +2,11 @@ package problemdomain;
 
 
 public class Hybrid extends Vehicle{
-	enum pts{
-		E,A,PHEV
-	}
-	pts powerTrain;
+
+	String powerTrain;
 	int electricRange;
-	public Hybrid(int carID, String vehicleType, String subtype, int speed, float fuel, int seats, int year,
-			String driveTrain, int price, int quantity, pts powerTrain, int electricRange) {
+	public Hybrid(long carID, String vehicleType, String subtype, int speed, double fuel, int seats, int year,
+			String driveTrain, int price, int quantity, String powerTrain, int electricRange) {
 		super(carID, vehicleType, subtype, speed, fuel, seats, year, driveTrain, price, quantity);
 		this.powerTrain = powerTrain;
 		this.electricRange = electricRange;
@@ -16,9 +14,9 @@ public class Hybrid extends Vehicle{
 	@Override
 	 public String toString() {
 		 String powerDesc;
-		 if (powerTrain == pts.E) {
+		 if (powerTrain == "E") {
 			 powerDesc = "Power Liftgate";
-		 } else if (powerTrain == pts.A) {
+		 } else if (powerTrain == "A") {
 			 powerDesc = "Split Liftgate";
 		 }	else {
 			 powerDesc = "Standard Liftgate";

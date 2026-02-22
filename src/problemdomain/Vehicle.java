@@ -1,6 +1,7 @@
 package problemdomain;
 
 public abstract class Vehicle {
+	//All vehicle classes made by Alexander Kovach
 	long carID;
 	String vehicleType;
 	String subtype;
@@ -11,7 +12,7 @@ public abstract class Vehicle {
 	String driveTrain;
 	int price;
 	int quantity;
-	public Vehicle(int carID, String vehicleType, String subtype, int speed, float fuel, int seats, int year,
+	public Vehicle(long carID, String vehicleType, String subtype, int speed, double fuel, int seats, int year,
 			String driveTrain, int price, int quantity) {
 		super();
 		this.carID = carID;
