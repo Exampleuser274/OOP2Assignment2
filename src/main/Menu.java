@@ -6,6 +6,7 @@ import java.util.Scanner;
 import problemdomain.*;
 
 public class Menu {
+	//VehiclePurrchase, typeSearch, subtype Search, & randomSearch made by Alexander Kovach
 	public ArrayList<Vehicle> vehiclePurchase(ArrayList<Vehicle> vehicleList){
 		boolean foundCheck = false;
 		Vehicle foundVehicle = null;
