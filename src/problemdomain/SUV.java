@@ -22,6 +22,6 @@ public class SUV extends Vehicle{
 			 + "Year:            " + year + "\n"
 			 + "Drivetrain:      " + driveTrain + "\n"
 			 + "Price:           " + price + "\n"
-			 + "Available:       " + quantity;
+			 + "Available:       " + quantity + "\n";
 	 }
 }

@@ -38,6 +38,6 @@ public class Hatchback extends Vehicle{
 			 + "Drivetrain:      " + driveTrain + "\n"
 			 + "Price:           " + price + "\n"
 			 + "Available:       " + quantity + "\n"
-			 + "Hatch Type:      " + hatchDesc;
+			 + "Hatch Type:      " + hatchDesc + "\n";
 	 }
 }

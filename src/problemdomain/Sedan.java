@@ -38,7 +38,7 @@ String trunkSize;
 		 + "Drivetrain:      " + driveTrain + "\n"
 		 + "Price:           " + price + "\n"
 		 + "Available:       " + quantity + "\n"
-		 + "Trunk Size:      " + trunkDesc;
+		 + "Trunk Size:      " + trunkDesc + "\n";
  }
 
 

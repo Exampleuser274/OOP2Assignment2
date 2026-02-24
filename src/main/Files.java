@@ -28,10 +28,11 @@ public class Files {
 			int quantity;
 			String typeFeature = null;
 			int featureInfo = 0;
-			String idCheck = null;
+			String idCheck;
 			Vehicle newVehicle = null;
 			while (vehicleReader.hasNextLine()) {
 				line = vehicleReader.nextLine();
+				
 				parts = line.split(";");
 				carID = Long.parseLong(parts[0]);
 				vehicleType = parts[1];
@@ -43,7 +44,7 @@ public class Files {
 				drivetrain = parts[7];
 				price = Integer.parseInt(parts[8]);
 				quantity = Integer.parseInt(parts[9]);
-				idCheck += carID;
+				idCheck = Long.toString(carID);
 				if (parts.length >= 11) {
 					typeFeature = parts[10];
 				}

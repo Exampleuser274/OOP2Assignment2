@@ -48,6 +48,6 @@ public class Hybrid extends Vehicle{
 			 + "Price:           " + price + "\n"
 			 + "Available:       " + quantity + "\n"
 			 + "Powertrain:      " + powerDesc + "\n"
-			 + "Range:           " + electricRange;
+			 + "Range:           " + electricRange + "\n";
 	 }
 }

@@ -48,6 +48,6 @@ public class PickupTruck extends Vehicle{
 			 + "Price:           " + price + "\n"
 			 + "Available:       " + quantity + "\n"
 			 + "Bed Type:        " + bedDesc + "\n"
-			 + "Bed Size:        " + cargoCapacity;
+			 + "Bed Size:        " + cargoCapacity + "\n";
 	 }
 }
