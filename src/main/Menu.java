@@ -6,6 +6,50 @@ import java.util.Scanner;
 import problemdomain.*;
 
 public class Menu {
+  public void displaymenu (Scanner input){
+    boolean looping = true;
+
+    Scanner choice = new java.util.Scanner(System.in);
+    do {
+        System.out.println("\n===Welcome to Drivemasters");
+        System.out.println("\nPlease choose from the options:");
+        System.out.println("1. Purchase Vehicle");
+        System.out.println("2. Display vehicles by type");
+        System.out.println("3. Display vehicles by subtype.");
+        System.out.println("4. Produce random list of vehicles.");
+        System.out.println("5. Save and Exit")
+        int menu_choice = choice.nextInt;
+
+        //based on interger from scanner it will lead into the following cases:
+        switch(menu_choice){
+          case 1:
+            vehiclePurchase();
+            break;
+          case 2:
+            typeSearch();
+            break;
+          case 3:
+            subtypeSearch();
+            break;
+          case 4:
+            randomSearch();
+            break;
+          case 5:
+            System.out.println("Exiting");
+            looping = false;
+            break;
+          default:
+            System.out.println("Invaild please try again.")
+            break;
+
+        
+
+        }
+        
+    }
+    while(looping == true);
+    choice.close;
+  }
 	public ArrayList<Vehicle> vehiclePurchase(ArrayList<Vehicle> vehicleList){
 		boolean foundCheck = false;
 		Vehicle foundVehicle = null;
