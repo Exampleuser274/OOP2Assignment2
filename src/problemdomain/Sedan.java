@@ -9,6 +9,10 @@ String trunkSize;
 	this.trunkSize = trunkSize;
  }
  @Override
+ public String returnToFile() {
+		return (carID + ";" + vehicleType + ";" + subtype  + ";" +  speed  + ";" + fuel  + ";" +  seats  + ";" +  year  + ";" +  driveTrain  + ";" + price + ";" + quantity + ";" + trunkSize);
+		}
+ @Override
  public String toString() {
 	 String trunkDesc;
 	 if (trunkSize == "L") {

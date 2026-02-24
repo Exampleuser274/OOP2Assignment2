@@ -9,6 +9,10 @@ public class Hatchback extends Vehicle{
 		this.hatchType = hatchType;
 	}
 	@Override
+	public String returnToFile() {
+		return (carID + ";" + vehicleType + ";" + subtype  + ";" +  speed  + ";" + fuel  + ";" +  seats  + ";" +  year  + ";" +  driveTrain  + ";" + price + ";" + quantity + ";" + hatchType);
+		}
+	@Override
 	 public String toString() {
 		 String hatchDesc;
 		 if (hatchType == "P") {

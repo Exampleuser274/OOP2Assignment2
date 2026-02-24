@@ -12,9 +12,13 @@ public class PickupTruck extends Vehicle{
 		this.cargoCapacity = cargoCapacity;
 	}
 	@Override
+	public String returnToFile() {
+		return (carID + ";" + vehicleType + ";" + subtype  + ";" +  speed  + ";" + fuel  + ";" +  seats  + ";" +  year  + ";" +  driveTrain  + ";" + price + ";" + quantity + ";" + cargoBed + ";" + cargoCapacity);
+		}
+	@Override
 	 public String toString() {
 		 String bedDesc;
-		 if (cargoBed == "EB") {
+		 if (cargoBed == "SB") {
 			 bedDesc = "Short Bed";
 		 } else if (cargoBed == "EB") {
 			 bedDesc = "Extended Bed";

@@ -8,6 +8,10 @@ public class SUV extends Vehicle{
 		super(carID, vehicleType, subtype, speed, fuel, seats, year, driveTrain, price, quantity);
 	}
 	@Override
+	public String returnToFile() {
+		return (carID + ";" + vehicleType + ";" + subtype  + ";" +  speed  + ";" + fuel  + ";" +  seats  + ";" +  year  + ";" +  driveTrain  + ";" + price + ";" + quantity);
+		}
+	@Override
 	 public String toString() {
 		return "Car ID:          " + carID + "\n"
 			 + "Vehicle Type:    " + vehicleType + "\n"

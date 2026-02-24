@@ -72,7 +72,16 @@ public class Files {
 		}
 		return vehicleList;
 	}
-	
+	public void saveFile(ArrayList<Vehicle> vehicleList) {
+		try (java.io.PrintWriter writer = new java.io.PrintWriter(new java.io.File("res\\vehicles.txt"))){
+			for (Vehicle car : vehicleList) {
+				writer.println(car.returnToFile());
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	
 }

@@ -12,6 +12,10 @@ public class Hybrid extends Vehicle{
 		this.electricRange = electricRange;
 	}
 	@Override
+	public String returnToFile() {
+		return (carID + ";" + vehicleType + ";" + subtype  + ";" +  speed  + ";" + fuel  + ";" +  seats  + ";" +  year  + ";" +  driveTrain  + ";" + price + ";" + quantity + ";" + powerTrain + ";" + electricRange);
+		}
+	@Override
 	 public String toString() {
 		 String powerDesc;
 		 if (powerTrain == "E") {

@@ -135,6 +135,7 @@ public abstract class Vehicle {
 			return false;
 		}
 	}
+	
 	public void checkout() {
 		int updateQuantity = this.getQuantity();
 		if (this.isAvailable() == true) {
@@ -143,5 +144,10 @@ public abstract class Vehicle {
 		}else {
 			System.out.println("The selected vehicle is not available");}
 		}
+
+
+	public String returnToFile() {
+		return null;
+	}
 	
 }
