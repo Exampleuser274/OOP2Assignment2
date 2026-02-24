@@ -35,4 +35,13 @@ public class Menu {
 		}
 		return(vehicleList);
 	}
+	public void typeSearch(ArrayList<Vehicle> vehicleList) {
+		
+	}
+	public void subtypeSearch(ArrayList<Vehicle> vehicleList) {
+		
+	}
+	public void randomSearch(ArrayList<Vehicle> vehicleList) {
+		
+	}
 }
