@@ -9,7 +9,7 @@ import problemdomain.*;
 
 public class Files {
 //Class for save & load functions
-//LoadFile class made by Alexander Kovach
+//LoadFile & saveFile function made by Alexander Kovach
 	public ArrayList<Vehicle> loadFile() {
 		ArrayList<Vehicle> vehicleList = new ArrayList<Vehicle>();
 		File vehicleListFile = new File("res\\vehicles.txt");
