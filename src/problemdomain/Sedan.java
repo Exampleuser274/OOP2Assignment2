@@ -12,6 +12,12 @@ String trunkSize;
  public String returnToFile() {
 		return (carID + ";" + vehicleType + ";" + subtype  + ";" +  speed  + ";" + fuel  + ";" +  seats  + ";" +  year  + ";" +  driveTrain  + ";" + price + ";" + quantity + ";" + trunkSize);
 		}
+ public String getTrunkSize() {
+	return trunkSize;
+}
+ public void setTrunkSize(String trunkSize) {
+	this.trunkSize = trunkSize;
+ }
  @Override
  public String toString() {
 	 String trunkDesc;

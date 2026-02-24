@@ -15,6 +15,18 @@ public class PickupTruck extends Vehicle{
 	public String returnToFile() {
 		return (carID + ";" + vehicleType + ";" + subtype  + ";" +  speed  + ";" + fuel  + ";" +  seats  + ";" +  year  + ";" +  driveTrain  + ";" + price + ";" + quantity + ";" + cargoBed + ";" + cargoCapacity);
 		}
+	public String getCargoBed() {
+		return cargoBed;
+	}
+	public void setCargoBed(String cargoBed) {
+		this.cargoBed = cargoBed;
+	}
+	public int getCargoCapacity() {
+		return cargoCapacity;
+	}
+	public void setCargoCapacity(int cargoCapacity) {
+		this.cargoCapacity = cargoCapacity;
+	}
 	@Override
 	 public String toString() {
 		 String bedDesc;

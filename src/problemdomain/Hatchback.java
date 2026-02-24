@@ -12,6 +12,12 @@ public class Hatchback extends Vehicle{
 	public String returnToFile() {
 		return (carID + ";" + vehicleType + ";" + subtype  + ";" +  speed  + ";" + fuel  + ";" +  seats  + ";" +  year  + ";" +  driveTrain  + ";" + price + ";" + quantity + ";" + hatchType);
 		}
+	public String getHatchType() {
+		return hatchType;
+	}
+	public void setHatchType(String hatchType) {
+		this.hatchType = hatchType;
+	}
 	@Override
 	 public String toString() {
 		 String hatchDesc;
